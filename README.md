@@ -1,4 +1,4 @@
-# Prompt Studio
+# PALI Prompt Studio — PWA
 
 Aplikasi web progresif (PWA) dalam Bahasa Melayu untuk meneroka 10 templat prompt dan menjana prompt tersuai.
 

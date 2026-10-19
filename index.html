@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07152f">
+  <meta name="description" content="PALI Prompt Studio — panduan dan pembina prompt ChatGPT dalam Bahasa Melayu.">
+  <title>PALI Prompt Studio</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="assets/icon-192.png" alt="Logo PALI">
+      <div><strong>PALI Prompt Studio</strong><small>Pustaka prompt & pembina arahan AI</small></div>
+    </div>
+    <button id="installBtn" class="button ghost hidden">Pasang aplikasi</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">KIT KERJA AI • BAHASA MELAYU</div>
+      <h1>Tulis prompt yang lebih jelas.<br><span>Dapatkan hasil yang lebih berguna.</span></h1>
+      <p>Teroka 10 templat prompt, sesuaikan dengan tugasan anda dan salin arahan untuk digunakan dalam ChatGPT.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#pembina">Bina prompt sekarang</a>
+        <a class="button secondary" href="#templat">Teroka 10 templat</a>
+      </div>
+      <div class="hero-note">Petua: nyatakan tugasan, konteks, sasaran, format dan kriteria kejayaan.</div>
+    </section>
+
+    <section class="section" id="pembina">
+      <div class="section-heading">
+        <div><div class="eyebrow">ALAT INTERAKTIF</div><h2>Pembina Prompt</h2></div>
+        <span class="pill">Boleh disunting</span>
+      </div>
+      <div class="builder-grid">
+        <form id="promptForm" class="panel form-panel">
+          <label for="template">Jenis prompt</label>
+          <select id="template">
+            <option value="role">1. Peranan pakar</option>
+            <option value="steps">2. Langkah demi langkah</option>
+            <option value="compare">3. Membandingkan pilihan</option>
+            <option value="ideas" selected>4. Penjana idea</option>
+            <option value="rewrite">5. Menulis semula teks</option>
+            <option value="review">6. Semakan & penambahbaikan</option>
+            <option value="scenario">7. Simulasi senario</option>
+            <option value="format">8. Permintaan berdasarkan format</option>
+            <option value="essentials">9. Senarai perkara penting</option>
+            <option value="brainstorm">10. Sumbang saran</option>
+          </select>
+
+          <label for="topic">Topik atau tugasan</label>
+          <textarea id="topic" rows="3" required>Bengkel produktiviti AI untuk sektor awam</textarea>
+
+          <label for="audience">Sasaran audiens</label>
+          <input id="audience" value="Kakitangan sektor awam" placeholder="Contoh: usahawan baharu">
+
+          <label for="output">Format hasil</label>
+          <select id="output">
+            <option>Senarai berstruktur</option>
+            <option>Jadual perbandingan</option>
+            <option>Panduan langkah demi langkah</option>
+            <option>Dokumen lengkap yang sedia digunakan</option>
+            <option>Skrip video</option>
+            <option>Pelan tindakan</option>
+          </select>
+
+          <label for="tone">Gaya jawapan</label>
+          <select id="tone">
+            <option>Profesional dan praktikal</option>
+            <option>Kreatif dan menarik</option>
+            <option>Akademik dan berasaskan sumber</option>
+            <option>Ringkas dan mudah difahami</option>
+            <option>Persuasif tetapi beretika</option>
+          </select>
+
+          <label for="constraints">Kekangan atau arahan tambahan <span class="optional">Pilihan</span></label>
+          <textarea id="constraints" rows="2" placeholder="Contoh: bajet RM500, tempoh 2 jam, sertakan sumber rasmi"></textarea>
+          <button class="button primary full" type="submit">Jana prompt</button>
+        </form>
+
+        <div class="panel result-panel">
+          <div class="result-top"><h3>Prompt anda</h3><span id="status" aria-live="polite">Belum dijana</span></div>
+          <textarea id="result" rows="18" placeholder="Prompt yang dijana akan muncul di sini." aria-label="Prompt yang dijana"></textarea>
+          <div class="result-actions">
+            <button id="copyBtn" class="button primary" type="button">Salin prompt</button>
+            <button id="useBtn" class="button secondary" type="button">Buka ChatGPT</button>
+            <button id="clearBtn" class="button ghost" type="button">Kosongkan</button>
+          </div>
+          <p class="fineprint">Semak prompt dan sesuaikan butirannya sebelum digunakan. AI boleh tersilap; sahkan fakta dan rujukan penting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="templat">
+      <div class="section-heading">
+        <div><div class="eyebrow">RUJUKAN PANTAS</div><h2>10 templat prompt</h2></div>
+        <p class="section-intro">Pilih mana-mana kad untuk memuatkan jenis prompt ke dalam pembina.</p>
+      </div>
+      <div class="template-grid" id="templateGrid"></div>
+    </section>
+
+    <section class="section workflow">
+      <div class="eyebrow">CONTOH ALIRAN KERJA</div>
+      <h2>Daripada idea kepada hasil siap</h2>
+      <div class="steps-grid">
+        <article><span>01</span><h3>Jana idea</h3><p>Teroka beberapa konsep yang sesuai dengan matlamat dan audiens.</p></article>
+        <article><span>02</span><h3>Pilih pendekatan</h3><p>Bandingkan pilihan menggunakan kriteria yang jelas.</p></article>
+        <article><span>03</span><h3>Hasilkan kandungan</h3><p>Tetapkan format, nada, panjang dan butiran yang wajib ada.</p></article>
+        <article><span>04</span><h3>Semak & tambah baik</h3><p>Periksa ketepatan, kejelasan, kebolehgunaan dan sumber.</p></article>
+      </div>
+    </section>
+
+    <section class="section callout">
+      <h2>Formula prompt yang lebih mantap</h2>
+      <p><strong>Peranan + Tugasan + Konteks + Audiens + Format + Kriteria kejayaan</strong></p>
+      <p>Contoh arahan tambahan: “Jika maklumat tidak mencukupi, nyatakan andaian. Jangan mereka-reka fakta atau sumber. Bezakan fakta yang disokong sumber daripada cadangan.”</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/icon-192.png" alt=""><strong>PALI Prompt Studio</strong></div>
+    <p>Alat pembelajaran prompt AI. Templat ialah titik permulaan, bukan jaminan bahawa setiap jawapan sentiasa tepat.</p>
+    <small>Direka untuk penggunaan responsif pada telefon dan komputer. Data borang kekal dalam sesi pelayar ini.</small>
+  </footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

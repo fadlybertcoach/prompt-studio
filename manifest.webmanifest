@@ -1,0 +1,26 @@
+{
+  "name": "PALI Prompt Studio",
+  "short_name": "PALI Prompt",
+  "description": "Pustaka 10 templat dan pembina prompt ChatGPT dalam Bahasa Melayu.",
+  "lang": "ms-MY",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f5f8fc",
+  "theme_color": "#07152f",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
